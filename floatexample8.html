@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>float example</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .img-container{
+                float: left;
+                width: 33.33%;
+                padding: 5px;
+            }
+            .clearfix::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+        </style>
+    </head>
+    <body>
+        
+<h2>Images Side by Side</h2>
+<p>Float images side by side:</p>
+
+<div class="clearfix">
+    <div class="img-container">
+    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT92oJA5MNNDafn1o_VPGTu1w3ZTQZc6n2qQqHgmpC2_P3p7pIe"
+    alt="lion" style="width: 100%">
+    </div>
+    <div class="img-container">
+    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSN3X7gFZun83XsXDxXuOU5cRY54U_jSoSfbz9OXUQpcEB-gC7H"
+    alt="tiger" style="width: 100%">
+    </div>
+    <div class="img-container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPQVb18LNClnWXHz45kF7UGrM5Ke75izZnYCqB63feojUhAVqA"
+    alt="jiraf" width="500px" height="380px">
+    </div>
+</div>
+
+
+<p>Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing property to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+    </body>
+</html>

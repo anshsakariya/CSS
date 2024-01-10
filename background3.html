@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>background</title>
+        <style>
+            #ex1{
+                border: 10px solid black;
+                padding: 35px;
+                background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5H65PI0xgOQCa__S5n1WmRSz4ar8CoStZVJhu7rQb4bPSjqCfF1dpzHZ1abEiej_TX-E&usqp=CAU);
+                background-repeat: no-repeat;
+            }
+            #ex2{
+                border: 10px solid black;
+                padding: 35px;
+                background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5H65PI0xgOQCa__S5n1WmRSz4ar8CoStZVJhu7rQb4bPSjqCfF1dpzHZ1abEiej_TX-E&usqp=CAU);
+                background-repeat: no-repeat; 
+                background-origin: border-box;
+            }
+            #ex3{
+                border: 10px solid black;
+                padding: 35px;
+                background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5H65PI0xgOQCa__S5n1WmRSz4ar8CoStZVJhu7rQb4bPSjqCfF1dpzHZ1abEiej_TX-E&usqp=CAU);
+                background-repeat: no-repeat; 
+                background-origin: content-box;
+            }
+            #ex4{
+             border: 10px dotted black;
+             padding: 35px;
+             background: yellow;
+            }
+            #ex5{
+             border: 10px dotted black;
+             padding: 35px;
+             background: yellow;
+             background-clip: padding-box;
+            }
+            #ex6{
+                border: 10px dotted black;
+                padding: 35px;
+                background: yellow;
+                background-clip: content-box;
+            }
+        </style>
+    </head>
+    <body>
+        
+<h1>The background-origin Property</h1>
+
+<p>No background-origin (padding-box is default):</p>
+<div id="ex1">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<p>background-origin: border-box:</p>
+<div id="ex2">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<p>background-origin: content-box:</p>
+<div id="ex3">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+
+
+<h1>The background-clip Property</h1>
+
+<p>No background-clip (border-box is default):</p>
+<div id="ex4">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+</div>
+
+<p>background-clip: padding-box:</p>
+<div id="ex5">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+</div>
+
+<p>background-clip: content-box:</p>
+<div id="ex6">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+</div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>specificity</title>
+        <style>
+            p{
+                color: red;
+            }
+            .test{
+             color: green;
+            }
+            h1{
+                color: red;
+            }
+            /*id*/
+            #demo{
+                color: blue;
+            }
+            /*class*/
+            .abc{
+                color: green;
+            }
+            h2{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Hello World</p>
+         <h1 class="test">Hello World</h1>
+         <h2 id="demo" class="abc">Hello World</h2>
+    </body>
+</html>

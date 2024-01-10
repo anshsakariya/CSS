@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>style image</title>
+        <style>
+            #myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+        </style>
+    </head>.
+    <body>
+        <h2>Image Modal</h2>
+
+<p>Here, we use CSS to create a modal (dialog box) that is hidden by default.</p>
+<p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
+<p>Don't worry if you do not understand the code right away. When you are done with CSS, go to our JavaScript Tutorial to learn more.</p>
+
+<img id="myImg" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRgVFhYZGRgZGhgZHBwaHBwcHBwaHBoaGhwYGhwcIS4lHB4rIRwYJjgmLS8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHjQrJCs0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0MTQ0NDQ0NDQ0NDQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACAwABBAUGB//EADQQAAEDAgQDBgUFAAMBAAAAAAEAAhEDIQQSMUFRYXEFIoGRofATQrHB0RQyUuHxFYKSYv/EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EACERAQEBAQACAgIDAQAAAAAAAAABEQISITFBA1EiYXEE/9oADAMBAAIRAxEAPwD2QciDlmFREHr5+Po7GkORByzh6IVExNaA5WHLOKiMPTDTw5EHJAeiD0wODkQckByIPUxPRwcrDkkORByIaHKw5KDkQciGByIOSg5QOTA7MrzJQcrlMDsymZKlXKYhuZXKVKuUwNzKZkuVJTENzK8yVKuUwMzK8yVKuUxDcymZLlTMgZKkpeZXmQMzKZkvMrzIg8yiDMog8cHIw5eNZjHjR7o6rS3tGqL5p9V6PFfJ6wOVhy8r/wArVPzAdAExnadUXzeBAU8TyeoDkYcvNYftd4Pehw4aeRC6mH7UY6JlvkR5/wBKXlfJ0wUQKSx4IkG3FT4zJjMPMKYacCUWYpWdvEeYQjEs/m3zH5TDWgOKIPWU4tg1e3zCF/aFMCc89NfJMNbg9WHlc+h2ix1pIPMfdaDiWDV48/wmGtIqIg9JpvDhIMjkmJhpgeiFRLARJiaPOiD0oIgmGjzK8yBWFMNMDlcpYRJho5UlComJo5VygCgCYaZKkoFEwMlTMgVpgKVMyFRMBZlEKiYPk7aaexloVimiDF3rIRSRNYmtCNo5IEimjaxOjkiHRQLylE1qcGqwAjQAxWGJghF3eI8wgTkVhi0ZhEkiELazDo4KBbWJmVV8Zn8235oa2LYzeTpAQ1oo1HNMgwtrO0Xjgeq88/tXgz1SXdo1DNwOg080w161nah3b5FaGdosOsj1Xhm4t/8AMpgx9SAM3oJU8R7v9Yz+QVtxTP5BeEONq/y9B+EBrPOrnHxMeSmD3VTtKi3Wo3znadAs7O38Ofnjq134Xjc3JAWSUwx79nadE3FRmsax9VobXZ/Nv/ocJ+kL5yGJ7CdUwx78Yph+dv8A6CL9QzTO3/0F4qi8b/lOLSR+FDHr6mJY0S57R4j04rO7tWkPm8gV5bIraxMMeqo9p0nfPHJ1v6W1txIuOI0XjWsTKNVzND1iyGPX5VeVebb2k+AMxGt9dUBxLyZzunqUPGvUBqGo5rRLnADmQuHS7Se0ZZB4E3I/KzVHF5zOMlEyu5/yFP8An6FWvO5FamNZHn7ImhINcBMbXHGF6HPTgEeZJD2/yQuxLdpUNaQ5E0rIK1tAClPftO9/7H9qGtz67Rus9bG7N14rG5zZgX6qZnbaJho3Z3aydrqiwDfTgh7yrqEDIH8j5Kg0cShDJ0RhhG4QAQNlRYU9rhCEOGyKEU+anw1CqBUGinh5+YeZ/CjqUbgjkfylByttJx0BKnv7rSzHJPY8RYCUAwkfukeBhMGCOunl6xKxbBGskxx8FZowdEdCo4DKTIGxEiPFPZVtDhw0t6LN6sXYSGAi+o3/ACp8LnbktZptdoY6oDScOnHbzVnUqlMYnNCux2go2hWoJjuPr+U0NBSgmNJvdZUbaZV/D3RUzO2iN0joVdCxSV/CTGP4hF8QaGU1CSxW2y0MGbQz75qGnyTQr4nJRFAUVNeIZdQvvCBzDr9UbXsAuJ8bf2vRrhqpRZ72SX4gH8DRKdiBoSitZeUBPNYXY0c0ylXDtLdUxWtp9lG2oeKy06wLi3ce7JwzEd1riehMeilsgaa9iTASP1zePlusb6NUiMjvJVSwFQ/I7xCzbz+1kbjjBshOMHBYH0XsmWOA4lpiOsKMdJA97oraMa/UZfKfqrZjnwQYI6D6+CyxHFUxwtBCmSq6TMa0iCwbXk8v781qpVKbmznIOsOG97SNdlxh7+qvNzUvP6pr0LQyYEneRBtxjXl4JjIsSXjcXtBO1ui862oQbHS9uXBaqXaL2XBNhbxuud56X07rahadZncDUX1hG3GAGS0DckfWND5brkU+2DoWgxw115LQ3EMeJzFpiD1M8fpyWLM+Yb/boPGcSI1tcAzy2PolimRY/cdddCsYqtZIzZhNtjx308Eup24Gk2JAItrbc3sN1JvxEvUbmvGnMA8Rv+Fb8YGNz5hlgab3i3FeZxOLc7M5pyhzs8XtaA0Hdc+m1xiXQNpN9eC6zjfdTye0Z2ixzstx3Qc8WOmo2Nwl0+02zBBbLoE27p0ceq8m6pBEOILrEzaNCPROrMLcuVxdmHDce/RPHPtZ1r2OGxDXiW8SPIx5J2ZeRwXaBDgSYIt4Wt6Lu0e2GOabAOgRrBN9fRS3PmN/LptfzTmV9jcLN8VsMGrnSIHFv7uNtVBUF+6ffgpOpZp8N7MrrAmVb2EbSFgOIyxLYKL9ebRtzTL9DSDBtbmE1tfYrCzGAySI6Iq1QMYXk90Ak8rSVf8AUaXY9osSLcSFF88xHaNN7i90gugwYMWtvwhRb8GdAcU0fNr9UFXEc1yRUUEnQE9F6McsbH4lx3jokl6jMM42JA681qHZwA/dJ9As3rmfK6zNeY6rdgaLtSBxGafoE7DUAwRq7f3wTmPAsSOi59d/pL00UWRMnmIGnQbLQH8PVc84jgqbiyCuNlqa3ue6LAx4oA480NPtVw1APUD6hM/5Vh/cweBhYzqfS7P2TVrkLE97HyCYdtYQTG58vYWurWpu+UjxkeoXPfhWzId4R/a68/36PL2sPAIuZ0I9COWiJ1AkSNvwP7WfGbnQGNePh4rKzFEaEjxXWc2zY35R0WOcBcIs3isrO0SAQYJI1gc9ykDGuiJ8d+is5q+UdJsnQE/4UxjABLzfYA8BvZc/9U79rTtr9fBBTdlubx6lZsrF6dX9SGi1t97+O6z1O0zcctrXXMr1y4hJ+JdOfxz5o1vxzuJunMxIgmNYmdyNui5p47IfibbLpeJfgrpMx9iD4DYLP8WdbnilUaRdcmBpz8FrbhGn5iOZ3McNln+PKbIB9aQBGgV0cU+DBidel9eVymDCMA/c5xHCw6ae5WosYAIYJGs314zYlZvXPxIvkeztKpUAaWh4EC7RcgQZK2UKLHDIGljspIOdjhnG2swQNP8AVzX4m0AQOA/CBuJO0jqYH9rjZfqY3O3Vo1qtN8lptoSIFxAaDpYyuqO13kd+k4GDLm3G+sbaaryhx0Oym/CTvoteAxRYSWjvxYmecArHXHrbFn5HSxPbLQ0hz2vcxoc2RfM75d92+RWCn2099+6O6Zho1iZja68/iqdWS8tbLnftGk6mBwmfd1tw9D4TTLpfGg0ErpOeeef3Uvb0WF7aac2dhBDcwy7x+4QdBoZ2WHtvtQPY6lTce88NdY3YL5hfSYF9uqyfqmgTImDpHiJXOrY7VoGtregsFOdt2RL3rHlIsXm3AyPCCoslSoZNyrXqysOvTw7dmzzN/wCkGcMaSDJmPJZ3Yp5AvpJ+0LNzVnN+x1aWJYC0kXP7p26IR2mcxPynQcOHj+VhNMRrwPhujFMDrxU8eRuw2JJbc3G6Y2sD8w98Vz88DVJNW/0U8dZx1KlUDceCQ3G/aFleZFrpDnFWcxZI69OuHdU1tQbLjMnim4fEEW9ypeP0mOuKg9hZcTjgLN4GfslOc48D4/lJezipzzPskW6qXNudEtneOsK8gixUayBAvPu66f40s07EnoOaXmRlxm23pzTWMZPeJJHDQqbnymhD4AA1Nyo50D1KbUYD3mCCNiZnjHNY3OOsWnXaVJ7ItjtfJUw3ugz7KnMPvZaU57zEKmMvrfgpTEGZ0FupTqRaDYealuJplB8TeZMhMOIn3cn7KBgJkRHlxUNNoFhN9ei5WymnsPA/hBUqw0uiw4f2lVawazOfAfcrmVMWS0N4T48Lpzxquk3FAszHXTlP+LBi8YS62gjXeOKzh5hKALiALk2HVdJzIOjhwatQkzAvItBGgldapWLYknxvyuueypkAba1jHqUNbESDyvyXLqXq/wBJreyvBN5O5tA80FSuDfaTf5jy4ALAHz3TbfoEL3z+3pCz4ey1rqFr7RHn143QvcxjS4N72xN78uCRIbJkk/RZsQ6RqOi3zztz6ITmJUQSovQrQX8E99GBYzoSPwhbayhPO6zamrdVkQqLwhDAp8IJ6TUcZ3UAEQdlDS5qfCTTUe+0BWwQqayNwPOU5lIGRedrgfVTYAc/ghbU3Vml3oOiZkYDESmwLa8ymOkHidjskU6l1Klcmbq57Uxzj43QNcRqDCQ58pgdZXDRuqcLA681dOdRt7lKbG9kxoOVKaP4kdRPLVLe4wOSW8prYiSpmAWcUb32SHuk8kL3K4HsKJlULIKiBrimaY65rgWJ6DedJS8TiybDmCua4OGtvcqOfKzOYY2sYHNALiI2Sq1AADKSb3RYMF0iBbnxTKrcvKym5cUttJxMRdXh6DmvkiBBI33Iidkyg7NI0tr+VvZlLAwx4Dfis992ekrnEiRfdDWrax7KGtId3vlPvmlvP5VkDqTtyY0GqF5nxMf4l/EvbdCXeAVz2NNRwJ1WWo+TYKMdbqlv1WuecMXPJRAotq3F6qbzsnBijmLGsaV8ZQvnRU10mIsnsYOCX0FsndW+oBZViHge/crPrJU+WpBl9034n3SaTHOs0SUTqT2mC1wNjod9+mt1bhg6lUnw9/lID9eaY/cfQyOoPBShhXOBfBLRqRsOKSyRQZrHiUbBbTb1TKmDeQHNaSHaQJPCY4apdJjspds3jbw5nlzCeU+qySAraU1wgwR91T2rWqHN5IjVlBSdBUz+aUW1ip5iynxUpgLjAEk6AaqKtz0JK31uynhzGsGYkXH/ANCc0f8AyLCSsgoPdmhpOWSeUaypO+bNlCgVt7PoXzujLB3F45e9EmhhnOdBFrEngOK6LQ1ukgAbXjfdTvr1kTQdoUph2kWy7++qwFo14+5WrFVdLzHLlxWQmdVONz2sdHBNDWyDci/hyS8ZUnx5/ZShWYBlEGfD/SsrzLoEkTaVmT+W1Ps7DvERM2NrJzKhFh9fHikvLdtdwPdkLX77bJZvsbMR3gDe3Tb6rnVH39FodVOXW6xBa45wi2ndU93qoqXRVlDKgKpyAoUUz9FEHpy91Vjg3Lm6ATF4tuuK8vJgNMgxYE34fVdSjiBvaLjLGgGkRB0QfGyTlzXJM6kk72Xj/H1edmIwYOg/PBBbH7ibQIvM2uF1sTTaAHgCTbYTzn8JYxJIhxNweI9lZ8Zi5ZkEmYv4zCXrrrqejNc/F1QTAAHQ+aUHaWM78OUQl1Cha9eqT0rfg62R8RqYIjfS+/kt+PxmYZcxF5IBi5vcmwiJ3K4jX3BFui0Vax4x6rl1+PepQJcGzMOJgj2F3eysY0ty2bHjpf6wvOEknW/v1R03xHJXv8flzlHrxiGk3BkiCWmNzF9RqfMrPiMMyMre7uDrB1IE+Psrk0cZMaDy9xK6jcUJAcZ5aHiPFeTrjrm+gOLDv3NOgMyBpadOgP8AgXNoYYvcSQQ0/Nw4a63+66tZ7C0Foied+G6SzFZSI7o0g392WuO+pLk9jCzsr9xeYANrict+P/VYcdhwwjLmgz+6Psux8R2YmxB2vEE+qyY6gXnIxhMG3ASAYJK68fk6t/lRz8DhzUflBi0yu5TwraTu6AZ1udOF/eqRh2CmMoubyTIvyCB7zx81O+r1cnwmulSxgbZov59OkcVpp1QBo0CTO8g3M77eq8+yxsdbceqYzEd4t6rlfw/olbe0WNjOz/sOAG44X+oXFe/mFsr4khsGb8QCFzTUkzr6L0fh5sntRPPKUgOTS9JebrvA9jrzGnvwVvdN5IKzgom3MJg0UtD7lC910tr4smtPHos2GAc6NEuVTjdUFuQOB5IZQz7KpuqmCO9/hDKMkwlhaFyVEUqIOgx+036lLdXMxJHv/U7F0WDvNd1EyshN5gx1+y8/OX2yP45H+z/Sp9XMIIQPdOu2gCS9/JbnMWBKmyFE6F0VUpodxukhMy2n31Sgov8A0jaYQZiNFbPdlKHUyBuPz5JzqtxOw9esaLKDx+ifQqHgDO0fnTisdT7St9PE92I3HCeOvvZKxlQSJg/bqUksBP7ix2hECPJRz4t9ImfFcpzN2DQ3FSIBA6DS44J7cUcpk8rcPyuUawkozV7oS/jinGtJ0+/1SHOvEIKLhczsreB49Fvxysja69xskGu7NY++at74j35JDJm2y1J9rDqr5jy8PsktCMifoOqWTpdbirD1btNEBMKweioCUTTuhcFcqi3OvKMlLVkqC3lU1RxUagJSUJUlBYKE6opVOQSVFSio9Y/Cd0lpkAEnb0jl6rhY0DUHS0REDwUUXg/57balZHWHW6VKii9sIiqVFFpVoiVFFBJsjYdArUUoKk6THLoiLi02J8yoosX5RT3k3npx81bRP+/lRRAprhPj70TH6KKK35UwQACBshbUA2VKLMQNSodClTa3iootwi2FSpqoorPlQtKskKlFQLwqBUUVFlWFFEEcoFFEFqAKKKAgLShcbKKJAOUqKKKj/9k=" alt="Northern Lights, Norway" width="300" height="200">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+    </body>
+</html>

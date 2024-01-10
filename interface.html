@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>interface</title>
+        <style>
+            .a{
+                border: 2px solid;
+                padding: 20px;
+                width: 300px;
+                resize: horizontal;
+                overflow: auto;
+            }
+            .b{
+                border: 2px solid;
+                padding: 20px;
+                width: 300px;
+                resize: vertical;
+                overflow: auto;
+            }
+            .c{
+                border: 2px solid;
+                padding: 20px;
+                width: 300px;
+                resize: both;
+                overflow: auto;
+            }
+            #d{
+                resize: none;
+            }
+            .e{
+                margin: 20px;
+                border: 1px solid black;
+                outline: 5px solid red;
+                outline-offset: 15px;
+            }
+            .f{
+                margin: 10px;
+                border: 1px solid black;
+                outline: 5px dashed blue;
+                outline-offset: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>The resize Property</h1>
+
+<div class="a">
+  <p>Let the user resize only the width of this div element.</p>
+  <p>To resize: Click and drag the bottom right corner of this div element.</p>
+</div>
+
+<h1>The resize Property</h1>
+
+<div class="b">
+  <p>Let the user resize only the height of this div element.</p>
+  <p>To resize: Click and drag the bottom right corner of this div element.</p>
+</div>
+
+
+<h1>The resize Property</h1>
+
+<div class="c">
+  <p>Let the user resize both the height and the width of this div element.</p>
+  <p>To resize: Click and drag the bottom right corner of this div element.</p>
+</div>
+
+<h1>The resize Property</h1>
+
+<p>In many browsers, textarea elements are resizable by default. In this example, we have used the resize property to disable the resizability:</p>
+
+<textarea id="d">Textarea - Not resizable</textarea>
+<br><br>
+
+<textarea>Textarea - Resizable (default)</textarea>
+
+
+<h1>The outline-offset Property</h1>
+
+<div class="e">This div has a 4 pixels solid red outline 15 pixels outside the border edge.</div>
+<br>
+
+<div class="f">This div has a 5 pixels dashed blue outline 5 pixels outside the border edge.</div>
+
+    </body>
+</html>

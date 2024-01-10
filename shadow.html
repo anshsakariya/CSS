@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>shadow</title>
+        <style>
+            .p1{
+                text-shadow: 2px 2px;
+            }
+            .p2{
+                text-shadow: 2px 2px red;
+            }
+            .p3{
+                text-shadow: 2px 2px 5px red;
+            }
+            .p4{
+                text-shadow: 2px 2px 4px #000000;
+            }
+            .p5{
+                text-shadow: 0 0 3px #FF0000;
+            }
+            .p6{
+                text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+            }
+            .p7{
+                color: white;
+                text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+            }
+            .p8{
+                color: coral;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;  
+            }
+            .a{
+                width: 300px;
+                height: 100px;
+                padding: 15px;
+                background-color: coral;
+                box-shadow: 10px 10px;
+            }
+            .b{
+                width: 300px;
+                height: 100px;
+                padding: 15px;
+                background-color: coral;
+                box-shadow: 10px 10px lightblue;
+            }
+            .c{        
+               width: 300px;
+               height: 100px;
+               padding: 15px;
+               background-color: coral;
+               box-shadow: 10px 10px 5px lightblue;
+            }
+            .d{
+                width: 300px;
+                height: 100px;
+                padding: 15px;
+                background-color: coral;
+                box-shadow: 10px 10px 5px 12px lightblue;
+            }
+            .e{
+                
+                width: 300px;
+                height: 100px;
+                padding: 15px;
+                background-color: coral;
+                box-shadow: 10px 10px 5px lightblue inset;
+            }
+ #f {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+  margin: 20px;
+}
+
+#g {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+  margin: 20px;
+}
+div.card{
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+}
+div.header{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    font-size: 40px;
+}
+div.container{
+    padding: 10px;
+}
+
+div.polaroid {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.con {
+  padding: 10px;
+}
+        </style>
+    </head>
+    <body>
+        <p class="p1">Text-shadow effect!</p>
+        <p class="p2">Text-shadow effect!</p>
+        <p class="p3">Text-shadow effect!</p>
+        <p class="p4">Text-shadow effect!</p>
+        <p class="p5">Text-shadow effect!</p>
+        <p class="p6">Text-shadow effect!</p>
+        <p class="p7">Text-shadow effect!</p>
+        <p class="p8">Text-shadow effect!</p>
+
+        
+<h1>The box-shadow Property</h1>
+
+<div class="a">This is a div element with a box-shadow</div>
+
+<h1>The box-shadow Property</h1>
+
+<div class="b">A div element with a lightblue box-shadow</div>
+
+<h1>The box-shadow Property</h1>
+
+<div class="c">A div element with a 5px blurred, lightblue box-shadow.</div>
+
+<h1>The box-shadow Property</h1>
+
+<div class="d">A div element with a blurred, lightblue box-shadow, with a spread radius of 12px.</div>
+
+
+<h1>The box-shadow Property</h1>
+
+<div class="e">A div element with a blurred, lightblue, inset box-shadow.</div>
+
+<h1>Multiple Shadows</h1>
+
+<div id="f">
+  <h2>Multiple shadows</h2>
+  <p>box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green:</p>
+</div>
+<br>
+
+<div id="g">
+  <h2>Multiple shadows with blur effect</h2>
+  <p>box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green:</p>
+</div>
+
+
+<h1>Create Cards</h1>
+
+<p>The box-shadow property can be used to create paper-like cards:</p>
+
+<div class="card">
+  <div class="header">
+    <h1>1</h1>
+  </div>
+
+  <div class="container">
+    <p>January 1, 2024</p>
+  </div>
+</div>
+
+<h1>Create Polaroid Images</h1>
+
+<p>The box-shadow property can be used to create polaroid images:</p>
+
+<div class="polaroid">
+  <img src="data:image/jpeg;base64,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" alt="Norway" style="width:100%">
+  <div class="con">
+    <p>Hardanger, Norway</p>
+  </div>
+</div>
+
+    </body>
+</html>

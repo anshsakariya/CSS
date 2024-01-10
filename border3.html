@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>border color</title>
+        <style>
+            p.one{
+               border-style:solid;
+               border-color:red ;
+            }
+            p.two{
+                border-style:dotted;
+                border-color: blue;
+            }
+            p.three{
+                border-style:solid ;
+                border-color: red green blue yellow;
+            }
+            p.four{
+                border-style: solid;
+                border-color: #bbbbbb;/*grey*/
+            }
+            p.five{
+                border-style: solid;
+                border-color: rgb(255,0,0);/*red*/
+            }
+            p.six{
+                border-style :solid ;
+                border-color: hsl(240,100%,50%);/*blue*/
+            }
+        </style>
+    </head>
+    <body>
+        <p class="one">a solid red border</p>
+        <p class="two">a dotted blue border</p>
+        <p><b>note:</b> The "border-color" property does not work if it is used alone. Use the
+             "border-style" property to set the borders first.</p>
+             <h2>the broder-color property</h2>
+             <p>The border-color property can have from one to four values (for the top border, 
+                right border, bottom border, and the left border):</p>
+             <p class="three">a solid multicolor border</p>
+
+             
+<h2>The border-color Property</h2>
+<p>The color of the border can also be specified using a hexadecimal value (HEX):</p>
+<p class="four">a solid grey border</p>
+
+
+<h2>The border-color Property</h2>
+<p>The color of the border can also be specified using RGB values:</p>
+<p class="five">a solid red border</p>
+
+
+<h2>The border-color Property</h2>
+<p>The color of the border can also be specified using HSL values:</p>
+<p class="six">a solid blue border</p>
+    </body>
+</html>
